@@ -1,0 +1,60 @@
+.objects {
+    margin-left: 45px;
+    position: relative;
+}
+
+#sq1{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#sq2{
+    position: absolute;
+    left: 0px;
+    top: 110px;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+#sq3{
+    position: absolute;
+    left: 0px;
+    top: 220px;
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
+
+#sq4{
+    position: absolute;
+    left: 0px;
+    top: 330px;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+}
+
+#sq5{
+    position: absolute;
+    left: 0px;
+    top: 440px;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+#sq6{
+    position: absolute;
+    left: 0px;
+    top: 550px;
+    width: 100px;
+    height: 100px;
+    background-color: violet;
+}
+
+

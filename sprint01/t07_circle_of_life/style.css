@@ -1,0 +1,26 @@
+body {
+  margin-top: 10px;
+}
+
+.circle {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  background: green;
+  display: inline-block;
+  position: absolute;
+  left: 2px;
+  min-width: 5em;
+  animation: moving 6s infinite;
+}
+.circle:hover {
+  transition: 2s;
+  background: red;
+}
+
+@keyframes moving {
+  50%{
+    left: 100%;
+    margin-left: -6.5em;
+  }
+}

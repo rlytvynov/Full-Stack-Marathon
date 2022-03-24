@@ -1,0 +1,23 @@
+h1{
+	text-align: center;
+}
+
+form {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+
+input,
+button {
+  color: green;
+}
+
+input:hover,
+button:hover {
+	color: red;
+}
+
+input{
+	flex-grow: 1;
+}

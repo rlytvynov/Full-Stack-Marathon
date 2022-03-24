@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>t08 task</title>
+	<link rel="stylesheet"href="style.css">
+</head>
+<body>
+	<h1>Superhero Form</h1>
+	<fieldset id = "jopa">
+		<form action="/" method="post">
+			<fieldset>
+				<legend>About a superhero</legend>
+				<span>Real Name</span>
+				<input autofocus type="text" name="name" maxlength="16" placeholder="Superhero real name">
+				<span>Superhero Name</span>
+				<input autofocus type="text" name="name" maxlength="16" placeholder="Superhero alias">
+				<span>Age</span>
+				<input type="number" min="1" max="999">
+				<br><br>
+				<span>About</span>
+        		<textarea name="text" cols="70" rows="5" maxlength="500" placeholder="information about the superhero, max 500 symbols"></textarea>
+        		<br><br>
+        		<label for="photo">Photo</label>
+          		<input type="file" name="photo" id="photo">
+			</fieldset>
+			<fieldset>
+				<legend>Powers</legend>
+				<span>  
+					<input type="checkbox" id="telekinesis" name="telekinesis" unchecked>
+  					<label for="telekinesis">Telekinesis</label>
+				</span>
+				<span>  
+					<input type="checkbox" id="ssos" name="ssos" unchecked>
+  					<label for="ssos">Super strength or speed</label>
+				</span>
+				<span>  
+					<input type="checkbox" id="shapeshifting" name="shapeshifting" unchecked>
+  					<label for="shapeshifting">Shapeshifting</label>
+				</span>
+				<span>  
+					<input type="checkbox" id="flight" name="flight" unchecked>
+  					<label for="flight">Flight</label>
+				</span>
+				<span>  
+					<input type="checkbox" id="EC" name="EC" unchecked>
+  					<label for="EC">Elemental Control</label>
+				</span>
+				<span>  
+					<input type="checkbox" id="other" name="other" unchecked>
+  					<label for="other">Other</label>
+				</span>
+				<br><br>
+				<span>
+					<label for="level">Level of control</label>	
+					<input type="range" id="level" name="level" min="0" max="10" value = "1", step = "1">	
+				</span>
+			</fieldset>
+			<fieldset>
+				<legend>Origin of Powers</legend>
+				<span>
+					<input type="radio" id="unknown" name="unknown" unchecked>
+  					<label for="unknown">Unkwnown</label>					
+				</span>
+				<span>
+					<input type="radio" id="fla" name="fla" unchecked>
+  					<label for="fla">Freak lab accident</label>					
+				</span>
+				<span>
+					<input type="radio" id="cbaawb" name="cbaawb" unchecked>
+  					<label for="cbaawb">Chosen by an ancient wise being</label>					
+				</span>
+				<span>
+					<input type="radio" id="tsinh" name="tsinh" unchecked>
+  					<label for="tsinh">The superhero is not human</label>					
+				</span>
+				<span>
+					<input type="radio" id="otherOP" name="otherOP" unchecked>
+  					<label for="otherOP">Other</label>					
+				</span>
+			</fieldset>
+			<br>
+			<span><button type="reset">CLEAR</button></span>
+			<span><button type="submit">SEND</button></span>
+		</form>
+	</fieldset>
+</body>
+</html>

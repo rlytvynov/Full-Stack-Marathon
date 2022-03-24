@@ -1,0 +1,28 @@
+#parent{
+	display: inline;
+	flex-wrap: wrap;
+}
+
+.date{
+	text-align: center;
+	background-color: rgb(64, 149, 181);
+    font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: white;
+}
+
+.temperature{
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 2em;
+}
+span{
+	flex: 1 1 auto;
+    display: inline-block;
+    position: relative;
+}
+span:hover {
+  box-shadow: 0 0 5px 1px #000;
+}

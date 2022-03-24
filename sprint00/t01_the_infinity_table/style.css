@@ -1,0 +1,55 @@
+table{
+    border-collapse: collapse;
+}
+thead{
+    background-color: black;
+    color:white;
+}
+
+img{
+    height: 120px;
+    width: 120px;
+    border-radius: 20px;
+}
+
+tr{
+    text-align: center;
+    border: 2px solid rgb(226, 226, 226);
+}
+
+td{
+    padding: 10px;
+    border: 2px solid rgb(226, 226, 226);
+}
+#trhead{
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+
+#tr1{
+    background-color: orange;
+}
+
+#tr2{
+    background-color: green;
+}
+
+#tr3{
+    background-color: blue;
+}
+
+#tr4{
+    background-color: yellow;
+}
+
+#tr5{
+    background-color: red;
+}
+
+#tr6{
+    background-color: purple;
+}
+#thbottom{
+    padding: 10px;
+}

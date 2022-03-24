@@ -1,0 +1,202 @@
+*{
+	font-family: Arial;
+	color: rgb(195, 187, 200);
+}
+
+h1 {
+	color: gray;
+	text-align: center;
+}
+
+.main {
+	background-color: rgb(47, 55, 65);
+	padding: 20px;
+	position: absolute;
+	display: inline-flex;
+}
+
+.menu{
+	background-color: rgb(36, 44, 52);
+	border-radius: 0px 25px 25px 0px;
+	padding: 10px;
+	height: 220px;
+	margin-top: 70px;
+}
+img{
+	margin: 10px;
+	height: 30px;
+}
+
+.settings{
+	padding: 50px 30px 50px 30px;
+	background-color: rgb(55, 64, 77);
+	border: 1px solid rgb(90, 94, 98);
+	color: white;
+	display: inline-flex;
+}
+span{
+	margin-bottom: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  bottom: 5px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider1 {
+	  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 2px; /* Specified height */
+  width: 135px;
+  background-color: rgb(39, 47, 55);
+}
+.slider1::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 20px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  background: rgb(55, 177, 146); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50px;
+}
+
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(36, 44, 52);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: rgb(55, 177, 146);
+  left: 4px;
+  bottom: 4px;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(21px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.radio+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.radio+label::before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 50px;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.radio:checked+label::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+#happy1+label::before {
+	background-color: skyblue;
+	border-color: skyblue;
+}
+#happy2+label::before {
+	background-color: rgb(55, 177, 146);
+	border-color: rgb(55, 177, 146);
+}
+#happy3+label::before {
+	background-color: pink;
+	border-color: pink;
+}
+#happy4+label::before {
+	background-color: yellow;
+	border-color: yellow;
+}
+#happy5+label::before {
+	background-color: orange;
+	border-color: orange;
+}
+
+.square {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.square+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.square+label::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  background-color: rgb(36, 44, 52);
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  margin-left: -10px;
+}
+
+.square:checked+label::before {
+  background-image: url("https://cdn-icons.flaticon.com/png/512/5299/premium/5299035.png?token=exp=1645105531~hmac=703de1b55fd525bbd702113cb830b2d5");
+}

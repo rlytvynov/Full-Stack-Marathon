@@ -1,0 +1,110 @@
+body{
+	background: url("assets/images/pivo_fon.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	font-family: Bradley Hand;
+	text-align: center;
+	font-weight: 900;
+	margin: 0;
+
+}
+header{
+    background-color: rgb(253, 226, 122);
+    display: flex;
+    padding: 25px 25px 8px 25px;
+    color: black;
+    font-size: 20px;
+}
+
+footer{
+    display: flex;
+}
+
+
+header div img {
+	height: 50px;
+}
+footer div{
+    padding: 20px;
+    background-color: rgb(253, 226, 122);
+    width: 50%;
+    color: black;
+}
+
+footer div:nth-child(2){
+    text-align: right;
+}
+
+.main {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu menu main main main';
+  gap: 10px;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.item1 { grid-area: header; }
+.item2 { 
+	grid-area: menu; 
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 3px black solid;
+	border-radius: 10px;
+	font-size: 20px;
+	text-align: left;
+	height: 300px;
+	padding: 25px;
+}
+.item3 { 
+	grid-area: main;
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 3px black solid;
+	border-radius: 10px;
+	text-align: left;
+	padding-bottom: 10px;
+}
+
+.main div h1{
+	background: url("assets/images/pivo_header.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	padding: 20px;
+	background-color: white;
+	border: 3px solid black;
+	border-radius: 20px;
+	margin: 10px 10px;
+}
+
+.item3 input, .item3 button, button{
+	padding: 10px;
+	border: 3px solid black;
+	border-radius: 10px;
+    background-color: rgb(253, 226, 122);
+}
+
+.Logo{
+    flex: 2;
+    font-weight: bold;
+}
+.About{flex: 2;}
+.Contact{flex: 2;}
+.Search{flex: 2;}
+.Phone{
+    flex: 3;
+    text-align: center;
+}
+
+.card {
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 3px black solid;
+	border-radius: 10px;
+	font-size: 20px;
+	text-align: left;
+	height: 700px;
+	padding: 25px;
+	margin: 10px;
+}

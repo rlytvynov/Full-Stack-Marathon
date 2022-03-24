@@ -1,0 +1,73 @@
+body {
+    padding: 30px;
+}
+
+.main {
+    border: 1px solid black;
+    border-radius: 10px;
+
+    width: 100%;
+    padding: 10px;
+    margin-left: -10px;
+}
+
+.add-and-clear {
+    position: relative;
+}
+
+#add, #clear {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#add {
+    background-color: rgb(128, 204, 202);
+    border: 1px solid rgb(128, 204, 202);
+    position: absolute;
+    color: white;
+    left: 0;
+}
+
+#clear {
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(240, 240, 240);
+    position: absolute;
+    right: 0;
+}
+
+.write-notes{
+    position: relative;
+    margin-top: 50px;
+    padding:30px 40px 17px 20px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+}
+
+.labels {
+    color: rgb(48, 77, 103);
+}
+
+#area {
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+    border: 2px solid rgb(128, 204, 202);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.saved-notes {
+    position: relative;
+    margin-top: 10px;
+    padding:30px 20px 17px 20px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+}
+
+.notes__render {
+
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: white;
+}

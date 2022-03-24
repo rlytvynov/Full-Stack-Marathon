@@ -1,0 +1,17 @@
+table{
+    width: 100%;
+}
+td img{
+    height: 120px;
+}
+img{
+    height: 500px;
+}
+
+#gauntlet:hover ~ table tr:nth-child(2n+1) td:nth-child(2n),
+#gauntlet:hover ~ table tr:nth-child(2n) td:nth-child(2n+1)
+{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 2s, visibility 2s;
+}

@@ -1,0 +1,19 @@
+div{
+    display: flex;
+}
+input{
+    width:100%;
+}
+button{
+    padding:0px,10px;
+    height: 2em;
+}
+
+.site-search{
+    
+    color: green;
+}
+
+.site-search:hover{
+    color: red;
+}
