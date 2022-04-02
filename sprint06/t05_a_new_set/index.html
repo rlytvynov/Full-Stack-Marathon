@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="result"></div>
+    <form action="">
+        <fieldset>
+            <legend>About candidate</legend>
+            <div class="row">
+                <label for="name" >Name</label>
+                <input type="text" name="name" class = "fields" id="name" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" class = "fields" id="email" required style="width:300px;">
+                <label for="age">Age</label>
+                <input type="number" name="age" class = "fields" id="age" required max="150" min="1">
+            </div>
+            <div class="row">
+                <label for="about">About</label>
+                <textarea name="bio" class = "fields" id="bio" cols="70" rows="8" required></textarea>
+            </div>
+            <div class="row">
+                <label for="file">Your photo:</label>
+                <input type="file" name="file" id="file" required>
+            </div>
+        </fieldset>
+        <button onclick="clearAll()">CLEAR</button>
+        <button onclick="sendInfo()">SEND</button>
+    </form>
+    <script src = "script.js"></script>
+</body>
+</html>
