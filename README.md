@@ -1,2 +1,2 @@
-# Full-Stack-Marathon
-Basics of Full stack programming
+# Full-Stack-Marathon - sprint 07
+Webpage data operations (GET and POST methods, cookies, API).
