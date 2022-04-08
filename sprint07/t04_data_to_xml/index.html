@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data to xml</title>
+</head>
+<body>
+    <h2>To XML:</h2>
+    <div id = "toXML"></div>
+    <h2>From XML:</h2>
+    <div id = "fromXML"></div>
+    <script>
+        window.onload = function() {
+            fetch('/toXML')
+                .then(response => response.json())
+                .then(data => {
+                    document.querySelector('#toXML').innerText = data.to;
+                    document.querySelector('#fromXML').innerText = data.from;
+                    console.log(data);
+                });
+        };
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad mini</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Notepad mini</h1>
+    <form action="/" method="post">
+        <div>
+            <input type="text" name="name" placeholder="Name">
+        </div>
+        <div>
+            <select name="importance">
+                <option selected value="low">low</option>
+                <option value="medium">medium</option>
+                <option value="high">high</option>
+            </select>
+        </div>
+        <div>
+            <textarea name="note" id="note" cols="20" rows="2" placeholder="Text of note..."></textarea>
+        </div>
+        <div><button type="submit">Create</button></div>
+    </form>
+    <div id = "list"></div>
+    <div id = "file_iself"></div>
+<script>
+        let list = document.getElementById('list');
+        let file_iself = document.getElementById('file_iself');
+        
+        if(file_iself.innerHTML.length < 5) {
+            file_iself.classList.add('hidden');
+        } else {
+            console.log(file_iself.innerHTML.length)
+        }
+
+        if(list.innerHTML.length < 5) {
+            list.classList.add('hidden');
+        }
+
+
+        window.onload = function() {
+            fetch('/files').then(response => response.json()).then(data => {
+                //console.log(data)
+                renderFiles(data)
+            });
+        };
+        
+        let renderFiles = (data) => {
+            if(data.html) {
+                list.innerHTML = "<h2>List of Notes:</h2>" + data.html;
+                list.classList.remove('hidden');
+            }
+            document.querySelectorAll('.btn-file').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    fetch('/show?file=' + e.target.dataset.file).then(response => response.json()).then(data => {
+                        //console.log(data)
+                        renderFiles(data)
+                    })
+                });
+            });
+
+            if(data.content) {
+                file_iself.innerHTML = `<h2>Datail of "${data.name}"</h2>`+ 
+                ` <p>${data.content}</p> 
+
+                `
+                console.log(`<button><a href = "/delete/?file=${data.name}">Delete file</button>`)
+                file_iself.classList.remove('hidden');
+            }
+
+        }
+</script>
+</body>
+</html>

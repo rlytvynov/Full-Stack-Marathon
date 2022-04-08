@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>t06. Marvel API</title>
+    <style>
+        .wrapper {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            padding: 10px;
+            border: 1px solid grey;
+            width: 100%;
+            margin-top: 3px;
+            border-color: rgb(137, 42, 42);
+            background-color: rgb(32, 34, 35);
+        }
+        .box .box {
+            width: auto;
+        }
+        .key {
+            color: white;
+        }
+        .inside {
+            background-color: rgb(19, 19, 27);
+            color: white
+        }
+    </style>
+</head>
+<body>
+    <h1>Marvel API</h1>
+    <form action="#" method="get">
+        <button type="submit">Show!</button>
+    </form>
+    <div id="content" class="wrapper"></div>
+    <script>
+        const button = document.querySelector('button');
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.target.setAttribute('disabled', true);
+            fetch('/show')
+                .then(response => response.json())
+                .then(result => {
+                document.querySelector('#content').innerHTML = getHtml(result);
+            });
+        });
+
+        function getHtml(data) {
+            let result = '';
+            for(let key in data) {
+                if(typeof data[key]  === "object") {
+                    result += `<div class="box"><b class="key">${key}: </b>${getHtml(data[key])}</div>`;
+                } else {
+                    result += `<div class="box inside"><b style = "color: rgb(78, 162, 183);">${key}</b><span style = "color: rgb(68, 77, 28);">: ${data[key]}</span></div>`;
+                }
+            }
+            return result;
+        }
+    </script>
+</body>
+</html>

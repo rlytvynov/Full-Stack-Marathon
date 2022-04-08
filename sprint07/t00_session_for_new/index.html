@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Superhero auth</title>
+	<style>
+        fieldset {
+            border: 2px solid gray;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+	<h1>Session for new</h1>
+	<fieldset id = "jopa">
+		<form id="form" action="/login" method="POST">
+			<fieldset>
+				<legend>About a superhero</legend>
+				<span>Real Name</span>
+				<input autofocus type="text" name="name" maxlength="16" placeholder="Superhero real name">
+				<span>Superhero Name</span>
+				<input autofocus type="text" name="alias" maxlength="16" placeholder="Superhero alias">
+				<span>Age</span>
+				<input type="number" min="1" max="999" name = "age">
+				<br><br>
+				<span>About</span>
+        		<textarea name="description" cols="70" rows="5" maxlength="500" placeholder="information about the superhero, max 500 symbols"></textarea>
+        		<br><br>
+        		<label for="photo">Photo</label>
+          		<input type="file" name="photo" id="photo">
+			</fieldset>
+			<fieldset>
+				<legend>Powers</legend>
+				<span>  
+					<input type="checkbox" id="telekinesis" name="pw_telekinesis" unchecked>
+  					<label for="pw_telekinesis">Telekinesis</label>
+				</span>
+				<span>  
+					<input type="checkbox" id="ssos" name="pw_strength" unchecked>
+  					<label for="pw_strength">Strength</label>
+				</span>
+				<span>  
+					<input type="checkbox" id="shapeshifting" name="pw_speed" unchecked>
+  					<label for="pw_speed">Speed</label>
+				</span>
+				<span>  
+					<input type="checkbox" id="flight" name="pw_intelligence" unchecked>
+  					<label for="pw_intelligence">Intelligence</label>
+				</span>
+				<span>  
+					<input type="checkbox" id="EC" name="pw_teleport" unchecked>
+  					<label for="pw_teleport">Teleportation</label>
+				</span>
+				<span>  
+					<input type="checkbox" id="other" name="pw_immortal" unchecked>
+  					<label for="pw_immortal">Immortal</label>
+				</span>
+                <span>  
+					<input type="checkbox" id="other" name="pw_another" unchecked>
+  					<label for="pw_another">Another</label>
+				</span>
+				<br><br>
+				<span>
+					<label for="level">Level of control</label>	
+					<input type="range" id="level" name="level" min="0" max="10" value = "1", step = "1">	
+				</span>
+			</fieldset>
+			<fieldset>
+				<legend>Publicity</legend>
+				<span>
+					<input type="radio" id="unknown" name="pub_unknown" unchecked>
+  					<label for="pub_unknown">UNKNOWN</label>					
+				</span>
+				<span>
+					<input type="radio" id="fla" name="pub_ghost" unchecked>
+  					<label for="pub_ghost">LIKE A GHOST</label>					
+				</span>
+				<span>
+					<input type="radio" id="cbaawb" name="pub_comics" unchecked>
+  					<label for="pub_comics">I AM IN COMMICS</label>					
+				</span>
+				<span>
+					<input type="radio" id="tsinh" name="pub_fun" unchecked>
+  					<label for="pub_fun">I HAVE FUN CLUB</label>					
+				</span>
+				<span>
+					<input type="radio" id="otherOP" name="pub_superstar" unchecked>
+  					<label for="pub_superstar">SUPERSTAR</label>					
+				</span>
+			</fieldset>
+			<br>
+			<span><button type="reset">CLEAR</button></span>
+			<span><button type="submit">SEND</button></span>
+		</form>
+	</fieldset>
+</body>
+</html>
