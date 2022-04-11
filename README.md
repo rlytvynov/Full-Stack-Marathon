@@ -1,2 +1,2 @@
 # Full-Stack-Marathon
-Basics of Full stack programming
+Basics of Web-Programming
