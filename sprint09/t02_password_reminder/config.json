@@ -1,0 +1,7 @@
+{
+    "host": "localhost",
+    "user": "rlytvynov",
+    "password": "securepass",
+    "db": "user_info",
+    "view": "views"
+}

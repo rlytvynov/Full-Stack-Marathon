@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+      *{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      body {
+          background-color: red;
+          color: goldenrod;
+          display: flex;
+        }
+      #inside_main {
+          margin-left: 100px;
+      }
+      .main {
+          margin: 0 auto;
+      }
+
+      form {
+          background-color: lightcoral;
+          border: 3px solid goldenrod;
+          border-radius: 10px;
+          padding: 20px;
+          box-sizing: border-box;
+      }
+
+      input {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 5px 10px;
+          background-color: blanchedalmond;
+          font-size: 20px;
+          border: 2px solid black;
+      }
+
+      label {
+          color: gold;
+          font-size: 20px;
+      }
+
+      button {
+            padding: 5px;
+            font-size: 20px;
+            background: goldenrod;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 100%;
+        }
+
+      #error {
+          color: crimson;
+      }
+      #LogIn{
+            color: gold;
+            text-align: right;
+        }
+        a:link {
+            color: white;
+        }
+        a:hover {
+            color: gold;
+        }     
+        a:visited {
+            color:brown;
+        }
+        a:active {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1 id = inside_main>Registration form</h1>
+        #TEXT#
+        <div class="form">
+            <form action="/user/create" method="post">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Input your full name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Input your email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="login">Login: </label>
+                    <input type="text" name="login" id="login" placeholder="Input login" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password" placeholder="Input password" required minlength="6">
+                  </div>
+                  <div class="form-group">
+                    <label for="confirm">Password: </label>
+                    <input type="password" name="confirm" id="confirm" placeholder="Confirm password" required minlength="6">
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <button type="submit">Create user</button>
+                  </div>
+                  <div class="form-group" id = "LogIn">
+                    <p>Already have an account?<a href="/">Log in!</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+      document.querySelector("button").addEventListener('click', (e) => {
+        let password = document.querySelector('#password');
+        let confirm = document.querySelector('#confirm');
+        console.log(password.value);
+        if(password.value !== confirm.value) {
+          e.preventDefault();
+          confirm.insertAdjacentHTML("afterend", "<div class='message error' id='error'>Passwords does not match</div>");
+          setTimeout(() => {
+            document.querySelector('.error').outerHTML = '';
+          },2000);
+        }
+      });
+    </script>
+</body>
+</html>
